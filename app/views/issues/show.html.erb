@@ -1,8 +1,13 @@
-<p><strong>Title:</strong><%= @issue.name %></p>
-	<p><strong>Text:</strong><%= @issue.desc %></p>
-	<h2>Tasks</h2>
-	<%= render @issue.tasks %>
-	<h2>Add a task:</h2>
-	<%= render 'tasks/form' %>
-	<%= link_to 'Edit', edit_issue_path(@issue) %> |
-	<%= link_to 'Back', issues_path %>
+<p><strong>Name:</strong><%= @issue.name %></p>
+<p><strong>Ticket:</strong><%= @issue.ticket %></p>
+<p><strong>Description:</strong><%= @issue.desc %></p>
+<p><strong>Resolution:</strong><%= @issue.resolute %></p>
+<p><strong>Notes:</strong><%= @issue.notes %></p>
+
+<hr>
+<h2>Tasks</h2>
+<%= render @issue.tasks %>
+<h2>Add a task:</h2>
+<%= render 'tasks/form' %>
+<%= link_to 'Edit', edit_issue_path(@issue) %> |
+<%= link_to 'Back', issues_path %>

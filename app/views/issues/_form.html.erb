@@ -13,12 +13,24 @@
 			</div>
 		<% end %>
 		<p>
-			<%= form.label :title %><br>
-			<%= form.text_field :title %>
+			<%= form.label :name %><br>
+			<%= form.text_field :name %>
 		</p>
 		<p>
-			<%= form.label :text %><br>
-			<%= form.text_area :text %>
+			<%= form.label :ticket %><br>
+			<%= form.text_field :ticket %>
+		</p>
+    <p>
+			<%= form.label :description %><br>
+			<%= form.text_area :desc %>
+		</p>
+    <p>
+			<%= form.label :Resolution %><br>
+			<%= form.text_area :resolute %>
+		</p>
+    <p>
+			<%= form.label :Notes %><br>
+			<%= form.text_area :notes %>
 		</p>
 		<p>
 			<%= form.submit %>
