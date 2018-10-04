@@ -15,7 +15,7 @@ class IssuesController < ApplicationController
 			@issue = Issue.find(params[:id])
 		end
 		def create
-			@issue = Issue.new(project_params)
+			@issue = Issue.new(issue_params)
 			if @issue.save
 				redirect_to @issue
 			else
@@ -24,7 +24,7 @@ class IssuesController < ApplicationController
 		end
 		def update
 			@issue = Issue.find(params[:id])
-			if @issue.update(project_params)
+			if @issue.update(issue_params)
 				redirect_to @issue
 			else
 				render 'edit'
@@ -33,10 +33,10 @@ class IssuesController < ApplicationController
 		def destroy
 			@issue = Issue.find(params[:id])
 			@issue.destroy
-			redirect_to projects_path
+			redirect_to issues_path
 		end
 		private
-			def project_params
+			def issue_params
 				params.require(:issue).permit(:title, :text)
 			end
 	end

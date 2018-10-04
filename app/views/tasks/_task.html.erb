@@ -1,0 +1,7 @@
+<p><strong>Name:</strong><%= task.name %></p>
+	<p><strong>Description:</strong><%= task.notes %></p>
+	<p>
+	<%= link_to 'Destroy Task', [task.issue, task],
+	method: :delete,
+	data: { confirm: 'Are you sure?' } %>
+	</p>
