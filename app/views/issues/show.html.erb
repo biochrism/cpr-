@@ -1,13 +1,15 @@
-<p><strong>Name:</strong><%= @issue.name %></p>
+<p><strong><%= @issue.name %></strong></p>
 <p><strong>Ticket:</strong><%= @issue.ticket %></p>
 <p><strong>Description:</strong><%= @issue.desc %></p>
 <p><strong>Resolution:</strong><%= @issue.resolute %></p>
 <p><strong>Notes:</strong><%= @issue.notes %></p>
 
 <hr>
-<h2>Tasks</h2>
+<h4>Tasks</h4>
 <%= render @issue.tasks %>
-<h2>Add a task:</h2>
+
+<hr>
+<h5>Add a task:</h5>
 <%= render 'tasks/form' %>
 <%= link_to 'Edit', edit_issue_path(@issue) %> |
 <%= link_to 'Back', issues_path %>

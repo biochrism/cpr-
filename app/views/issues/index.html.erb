@@ -1,21 +1,18 @@
-<h1>Listing CPR+ Issues</h1>
-	<%= link_to 'Add New Issue', new_issue_path %>
+<h4>Listing CPR+ Issues</h4>
+<hr>
+	<%= link_to 'New Issue', new_issue_path %>
+<hr>
 	<table>
 	<tr>
-		<th>Name</th>
 		<th>Ticket</th>
-    <th>Description</th>
-    <th>Resolution</th>
-    <th>Notes</th>
-		<th colspan="6"></th>
+		<th>Name</th>
+    <th colspan="3">Actions</th>
 	</tr>
 	<% @issues.each do |issue| %>
 	<tr>
-		<td><%= issue.name %></td>
+
     <td><%= issue.ticket %></td>
-		<td><%= issue.desc %></td>
-    <td><%= issue.resolute %></td>
-    <td><%= issue.notes %></td>
+		<td><%= issue.name %></td>
 		<td><%= link_to 'Show', issue_path(issue) %></td>
 		<td><%= link_to 'Edit', edit_issue_path(issue) %></td>
 		<td><%= link_to 'Destroy', issue_path(issue),

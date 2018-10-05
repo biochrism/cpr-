@@ -7,6 +7,7 @@ class CreateIssues < ActiveRecord::Migration[5.2]
       t.string :resolute
       t.string :notes
 
+
       t.timestamps
     end
   end
